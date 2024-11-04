@@ -1,0 +1,16 @@
+piVersion: v1
+data:
+  EMAIL_CONFIRMATION_DISABLED: "true"
+  ENABLE_CONVERSIONS: "true"
+  ENABLED_LINKED_FILE_TYPES: project_file,project_output_file
+  EXTERNAL_AUTH: none
+  OVERLEAF_APP_NAME: IMSlab Overleaf
+  OVERLEAF_MONGO_URL: mongodb://mongo-mongodb-headless.overleaf.svc.cluster.local/sharelatex
+  OVERLEAF_REDIS_HOST: redis-headless.overleaf.svc.cluster.local
+  REDIS_HOST: redis-headless.overleaf.svc.cluster.local
+  REDIS_PORT: "6379"
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: sharelatex-variables
+  name: sharelatex-variables
