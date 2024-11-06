@@ -17,8 +17,8 @@ This deployment has been tested for a microk8s cluster with NFS for permanent st
 A version of the modified [Overleaf](https://github.com/overleaf/overleaf) image that is required for this deployment
 has been uploaded to [Docker Hub](https://hub.docker.com/r/abompotas/overleaf).
 However, you can build you own image using the Dockerfile in the [overleaf directory](/overleaf). 
-In this case, don't forget to push the new image to a registry edit the [overleaf-deployment.yaml](/deployment/overleaf/overleaf-deployment.yaml) to 
-point the correct image.
+In this case, don't forget to push the new image to a registry edit the 
+[overleaf-deployment.yaml](/deployment/overleaf/overleaf-deployment.yaml) to point the correct image.
 
 Example:
 ```
@@ -36,4 +36,18 @@ Example:
 ```
 cd deployment
 ./deploy.sh
+```
+
+### Install LaTeX packages (Optional)
+
+Overleaf's default installation is missing some of the most common packages. These can installed by modifying the 
+post-installation scripts of the sharelatex image or by executing commands directly inside the container.
+
+Example:
+```
+tlmgr install collection-latexrecommended
+tlmgr install collection-fontsrecommended
+tlmgr install collection-latexextra
+tlmgr install collection-algorithms
+tlmgr install collection-algorithmicx
 ```
