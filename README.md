@@ -48,6 +48,6 @@ Example:
 tlmgr install collection-latexrecommended
 tlmgr install collection-fontsrecommended
 tlmgr install collection-latexextra
-tlmgr install collection-algorithms
-tlmgr install collection-algorithmicx
+tlmgr install algorithms
+tlmgr install algorithmicx
 ```
