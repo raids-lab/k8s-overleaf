@@ -50,4 +50,5 @@ tlmgr install collection-fontsrecommended
 tlmgr install collection-latexextra
 tlmgr install algorithms
 tlmgr install algorithmicx
+tlmgr install apacite
 ```
