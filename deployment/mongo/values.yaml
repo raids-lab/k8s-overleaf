@@ -14,6 +14,8 @@
 ## @param global.namespaceOverride Override the namespace for resource deployed by the chart, but can itself be overridden by the local namespaceOverride
 ##
 global:
+  security:
+    allowInsecureImages: true
   imageRegistry: ""
   ## E.g.
   ## imagePullSecrets:
@@ -129,7 +131,7 @@ diagnosticMode:
 ## @param image.debug Set to true if you would like to see extra information on logs
 ##
 image:
-  registry: docker.io
+  registry: docker.1ms.run
   repository: bitnami/mongodb
   tag: 7.0.14-debian-12-r3
   digest: ""
@@ -255,7 +257,7 @@ tls:
   ## @param tls.extraDnsNames Add extra dns names to the CA, can solve x509 auth issue for pod clients
   ##
   image:
-    registry: docker.io
+    registry: docker.1ms.run
     repository: bitnami/nginx
     tag: 1.27.1-debian-12-r5
     digest: ""
@@ -298,7 +300,7 @@ tls:
   ##     memory: 1024Mi
   ##
   resources: {}
-  ## Init Container securityContext 
+  ## Init Container securityContext
   ## ref: https://kubernetes.io/docs/concepts/security/pod-security-policy/
   ## @param tls.securityContext Init container generate-tls-cert Security context
   ##
@@ -843,7 +845,7 @@ externalAccess:
     ## @param externalAccess.autoDiscovery.image.pullSecrets Init container auto-discovery image pull secrets
     ##
     image:
-      registry: docker.io
+      registry: docker.1ms.run
       repository: bitnami/kubectl
       tag: 1.31.1-debian-12-r2
       digest: ""
@@ -893,7 +895,7 @@ externalAccess:
     ## @param externalAccess.dnsCheck.image.pullSecrets Init container dns-check image pull secrets
     ##
     image:
-      registry: docker.io
+      registry: docker.1ms.run
       repository: bitnami/os-shell
       tag: 12-debian-12-r30
       digest: ""
@@ -1335,7 +1337,7 @@ backup:
       ## @param backup.cronjob.storage.annotations PVC annotations
       ##
       annotations: {}
-      ## @param backup.cronjob.storage.mountPath Path to mount the volume at 
+      ## @param backup.cronjob.storage.mountPath Path to mount the volume at
       ##
       mountPath: /backup/mongodb
       ## @param backup.cronjob.storage.subPath Subdirectory of the volume to mount at
@@ -1465,7 +1467,7 @@ volumePermissions:
   ## @param volumePermissions.image.pullSecrets Specify docker-registry secret names as an array
   ##
   image:
-    registry: docker.io
+    registry: docker.1ms.run
     repository: bitnami/os-shell
     tag: 12-debian-12-r30
     digest: ""
@@ -2263,7 +2265,7 @@ metrics:
   ## @param metrics.image.pullSecrets Specify docker-registry secret names as an array
   ##
   image:
-    registry: docker.io
+    registry: docker.1ms.run
     repository: bitnami/mongodb-exporter
     tag: 0.41.0-debian-12-r0
     digest: ""
@@ -2498,4 +2500,3 @@ metrics:
     ##     summary: High request latency
     ##
     rules: []
-

@@ -14,6 +14,8 @@
 ## @param global.redis.password Global Redis&reg; password (overrides `auth.password`)
 ##
 global:
+  security:
+    allowInsecureImages: true
   imageRegistry: ""
   ## E.g.
   ## imagePullSecrets:
@@ -100,7 +102,7 @@ diagnosticMode:
 ## @param image.debug Enable image debug mode
 ##
 image:
-  registry: docker.io
+  registry: crater-harbor.act.buaa.edu.cn/docker.io
   repository: bitnami/redis
   tag: 7.4.0-debian-12-r4
   digest: ""
@@ -1138,7 +1140,7 @@ sentinel:
   ## @param sentinel.image.debug Enable image debug mode
   ##
   image:
-    registry: docker.io
+    registry: crater-harbor.act.buaa.edu.cn/docker.io
     repository: bitnami/redis-sentinel
     tag: 7.4.0-debian-12-r5
     digest: ""
@@ -1689,7 +1691,7 @@ metrics:
   ## @param metrics.image.pullSecrets Redis&reg; Exporter image pull secrets
   ##
   image:
-    registry: docker.io
+    registry: crater-harbor.act.buaa.edu.cn/docker.io
     repository: bitnami/redis-exporter
     tag: 1.63.0-debian-12-r0
     digest: ""
@@ -2061,7 +2063,7 @@ volumePermissions:
   ## @param volumePermissions.image.pullSecrets OS Shell + Utility image pull secrets
   ##
   image:
-    registry: docker.io
+    registry: crater-harbor.act.buaa.edu.cn/docker.io
     repository: bitnami/os-shell
     tag: 12-debian-12-r30
     digest: ""
@@ -2125,7 +2127,7 @@ kubectl:
   ## @param kubectl.image.pullSecrets Kubectl pull secrets
   ##
   image:
-    registry: docker.io
+    registry: crater-harbor.act.buaa.edu.cn/docker.io
     repository: bitnami/kubectl
     tag: 1.31.1-debian-12-r2
     digest: ""
@@ -2195,7 +2197,7 @@ sysctl:
   ## @param sysctl.image.pullSecrets OS Shell + Utility image pull secrets
   ##
   image:
-    registry: docker.io
+    registry: crater-harbor.act.buaa.edu.cn/docker.io
     repository: bitnami/os-shell
     tag: 12-debian-12-r30
     digest: ""
@@ -2243,4 +2245,3 @@ useExternalDNS:
   suffix: ""
   annotationKey: external-dns.alpha.kubernetes.io/
   additionalAnnotations: {}
-
