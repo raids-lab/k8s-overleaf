@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: overleaf.crater.act.buaa.edu.cn
+    - host: overleaf.gpu.act.buaa.edu.cn
       http:
         paths:
           - backend:
@@ -21,5 +21,5 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - overleaf.crater.act.buaa.edu.cn
+        - gpu.act.buaa.edu.cn
       secretName: overleaf-tls-secret
